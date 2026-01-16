@@ -69,77 +69,66 @@ export default function AwardsRecognitionCeremony() {
     }, []);
 
   const items = [
-    { label: "Education", icon: GraduationCap, image: "/education.jpg" },
-    { label: "Entrepreneurship", icon: Briefcase, image: "/entrepreneurship.jpg" },
-    { label: "Social innovation", icon: Lightbulb, image: "/social.webp" },
-    { label: "Environment", icon: Leaf, image: "/environment.jpg" },
-    { label: "Technology", icon: Cpu, image: "/technology.jpg" },
+    { label: "Éducation", icon: GraduationCap, image: "/éducation.jpg" },
+    { label: "Entrepreneuriat", icon: Briefcase, image: "/Entrepreneuriat.jpg" },
+    { label: "Innovation sociale", icon: Lightbulb, image: "/Innovationsociale.jpg" },
+    { label: "Environnement", icon: Leaf, image: "/Environnement.jpg" },
+    { label: "Technologie", icon: Cpu, image: "/Technologie.jpg" },
     { label: "Art & Culture", icon: Palette, image: "/art.jpg" },
-    { label: "and more", icon: MoreHorizontal, image: "/more.jpg" },
+    { label: "et autre", icon: MoreHorizontal, image: "/more.jpg" },
   ];
 
   return (
-    <section className="w-full py-28 bg-white overflow-hidden">
-      <div className=" mx-auto px-6 mb-14">
-        <SectionTitle title="AN AWARDS AND RECOGNITION CEREMONY" />
+    <section className="w-full py-16 sm:py-20 lg:py-28 bg-white overflow-hidden">
+      <div className="mx-auto px-4 sm:px-6 mb-10 sm:mb-14">
+        <SectionTitle title="Une cérémonie de distinction et de reconnaissance" />
 
-        {/* <h2 className="text-[#1f2937] text-center text-2xl lg:text-4xl font-semibold mb-8">
-          AN AWARDS AND RECOGNITION CEREMONY
-        </h2> */}
-
-        {/* TEXT */}
-        <p className="text-[#4b5563] font-medium text-center text-3xl leading-relaxed">
-          Held in Morocco during AFCON, the EPIK 100 ceremony honors the 100 awardees with a
-          symbolic trophy recognizing their engagement and their early contributions to their
-          communities across sectors such as:
+        <p className="text-[#4b5563] font-medium text-center text-lg sm:text-xl lg:text-3xl leading-relaxed">
+          Organisée au Maroc pendant la CAN, la cérémonie EPIK 100 rend hommage aux 100 lauréats à travers un trophée symbolique récompensant leur engagement et leurs premières contributions au sein de leurs communautés dans des secteurs tels que :
         </p>
       </div>
 
-      {/* CAROUSEL */}
-        <div className="relative w-full overflow-hidden">
-            <div
-            ref={trackRef}
-            className="flex gap-6 w-max"
-            >
-            {[...items, ...items].map((item, i) => {
-                const Icon = item.icon;
+      <div className="relative w-full overflow-hidden">
+        <div
+          ref={trackRef}
+          className="flex gap-4 sm:gap-6 w-max"
+        >
+          {[...items, ...items].map((item, i) => {
+            const Icon = item.icon;
 
-                return (
-                <div
-                    key={i}
-                    className="carousel-card relative w-[420px] h-[280px] rounded-2xl overflow-hidden shrink-0"
-                    style={{
-                    backgroundImage: `url(${item.image})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    }}
-                >
-                    {/* OVERLAY */}
-                    <div className="absolute inset-0 bg-black/55" />
+            return (
+              <div
+                key={i}
+                className="carousel-card relative w-[260px] sm:w-[320px] lg:w-[420px] h-[180px] sm:h-[220px] lg:h-[280px] rounded-2xl overflow-hidden shrink-0"
+                style={{
+                  backgroundImage: `url(${item.image})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              >
+                {/* OVERLAY */}
+                <div className="absolute inset-0 bg-black/55" />
 
-                    {/* CONTENT */}
-                    <div className="relative z-10 h-full flex flex-col items-center justify-center gap-3">
-                    <Icon
-                        size={40}
-                        strokeWidth={2.5}
-                        className="text-[#e4c45c]"
-                    />
-                    <p className="text-[#e4c45c] text-lg font-semibold text-center">
-                        {item.label}
-                    </p>
-                    </div>
+                {/* CONTENT */}
+                <div className="relative z-10 h-full flex flex-col items-center justify-center gap-2 sm:gap-3">
+                  <Icon
+                    size={28}
+                    strokeWidth={2.5}
+                    className="text-[#e4c45c] sm:w-[36px] sm:h-[36px] lg:w-[40px] lg:h-[40px]"
+                  />
+                  <p className="text-[#e4c45c] text-sm sm:text-base lg:text-lg font-semibold text-center px-2">
+                    {item.label}
+                  </p>
                 </div>
-                );
-            })}
-            </div>
+              </div>
+            );
+          })}
         </div>
+      </div>
 
-      {/* TEXT */}
-      <div className="max-w-[1200px] mx-auto px-6 mt-14">
-        <p className="text-[#4b5563] font-medium text-center text-3xl leading-relaxed">
-          Beyond recognition, the ceremony serves as a pan-African networking platform, bringing
-          together mentors, companies, institutions, and partners, and fostering exchanges around
-          future projects.
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 mt-10 sm:mt-14">
+        <p className="text-[#4b5563] font-medium text-center text-lg sm:text-xl lg:text-3xl leading-relaxed">
+          Au-delà de la reconnaissance, la cérémonie constitue une plateforme de networking panafricaine, réunissant mentors, entreprises, institutions et partenaires, et favorisant les échanges autour de projets à venir.
         </p>
       </div>
     </section>

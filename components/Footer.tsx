@@ -54,7 +54,6 @@ const Footer = () => {
           "-=0.4"
         )
 
-        // Finally animate content
         .to(
           contentRef.current,
           {
@@ -74,9 +73,7 @@ const Footer = () => {
     <footer ref={footerRef} className="bg-gradient-to-br from-[#020052] via-[#0b1a7a] to-[#132a9c] py-8 md:py-12 lg:py-16 px-4 md:px-6 lg:px-8 rounded-t-4xl">
       <div className=" mx-auto">
 
-        {/* Footer Content */}
         <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-6 md:gap-8">
-          {/* Logo Section */}
           <div ref={logoRef} className="flex flex-1 flex-col md:flex-row !items-center md:items-start gap-4 md:gap-6">
             <Image
               src={logo}
@@ -101,12 +98,10 @@ const Footer = () => {
             </div>
           </div>
           <div className="hidden lg:block  h-[200px] w-px bg-gradient-to-b from-transparent via-gray-500 to-transparent opacity-80" />
-          {/* Content Section */}
           <div
             ref={contentRef}
             className="flex flex-col lg:flex-row items-start  gap-6 lg:gap-12 text-gray-600 w-full lg:w-auto "
           >
-            {/* Contact Information */}
             <div className="flex flex-col gap-1  text-start lg:text-left">
               <h4 className="text-lg font-semibold text-gray-200 uppercase tracking-wide">Contact</h4>
               <a 
@@ -129,12 +124,11 @@ const Footer = () => {
           </div>
         </div>
       </div>
-            {/* Copyright */}
-            <div className="mt-12 flex flex-col gap-3 text-center lg:text-center lg:mx-auto">
-              <p className="text-sm text-gray-200">
-                © 2025 All Rights Reserved
-              </p>
-            </div>
+      <div className="mt-12 flex flex-col gap-3 text-center lg:text-center lg:mx-auto">
+        <p className="text-sm text-gray-200">
+          © 2025 All Rights Reserved
+        </p>
+      </div>
     </footer>
   );
 };

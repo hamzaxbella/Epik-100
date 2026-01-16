@@ -3,34 +3,35 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://arab-african-summit.com'),
+  metadataBase: new URL('https://epik-100.com'),
   title: {
-    default: "Arab-African Summit 2025 | Non-Profit Financing Conference Rabat",
-    template: "%s | Arab-African Summit 2025"
+    default: "EPIK 100 | Honoring Africa’s Emerging Young Leaders",
+    template: "%s | EPIK 100",
   },
-  description: "Join the Arab-African Summit on Non-Profit Financing in Rabat, Morocco on November 20, 2025. Explore innovative funding models, Islamic finance, social impact investment, and sustainable financing solutions for NGOs and charitable organizations across Arab and African regions.",
+ description:
+    "EPIK 100 is a pan-African recognition program by EPIK Leaders, celebrating 100 young African leaders selected for their community engagement, leadership potential, and commitment to driving positive impact across the continent.",
   keywords: [
-    "Arab-African Summit",
-    "Non-Profit Financing",
-    "NGO Funding",
-    "Islamic Finance",
-    "Social Impact Investment",
-    "Rabat Morocco",
-    "Charitable Organizations",
-    "Sustainable Financing",
-    "Zakat",
-    "Waqf",
-    "Arab Countries",
-    "African Development",
-    "EPIK LEADERS",
-    "Summit 2025",
-    "Non-Profit Conference",
-    "Crowdfunding NPO",
-    "International Aid"
+    "EPIK 100",
+    "EPIK Leaders",
+    "African Youth Leadership",
+    "Young African Leaders",
+    "Pan-African Program",
+    "Youth Engagement Africa",
+    "Community Leadership",
+    "Social Impact Africa",
+    "Emerging Leaders",
+    "African Changemakers",
+    "Youth Recognition Program",
+    "Leadership Development Africa",
+    "Civic Engagement",
+    "Africa Youth Network",
+    "EPIK Leaders Clubs",
   ],
-  authors: [{ name: "EPIK LEADERS" }],
-  creator: "EPIK LEADERS",
-  publisher: "EPIK LEADERS",
+
+  authors: [{ name: "EPIK Leaders" }],
+  creator: "EPIK Leaders",
+  publisher: "EPIK Leaders",
+
   formatDetection: {
     email: false,
     address: false,
@@ -39,23 +40,25 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://arab-african-summit.com",
-    title: "Arab-African Summit 2025 | Non-Profit Financing Conference",
-    description: "Join us in Rabat on November 20, 2025 for the Arab-African Summit on Non-Profit Financing. Explore innovative funding models and build resilient solutions for sustainable financing.",
-    siteName: "Arab-African Summit",
+    url: "https://epik-100.com",
+    title: "EPIK 100 | Honoring Africa’s Emerging Young Leaders",
+    description:
+      "EPIK 100 is a pan-African recognition program by EPIK Leaders, celebrating 100 young African leaders selected for their engagement, leadership potential, and commitment to driving positive impact across the continent.",
+    siteName: "EPIK 100",
     images: [
       {
         url: "/hero.jpg",
         width: 1800,
         height: 900,
-        alt: "Arab-African Summit on Non-Profit Financing",
+        alt: "EPIK 100 – Pan-African Recognition Program by EPIK Leaders",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Arab-African Summit 2025 | Non-Profit Financing Conference",
-    description: "Join the Arab-African Summit on Non-Profit Financing in Rabat, Morocco - November 20, 2025",
+    title: "EPIK 100 | Honoring Africa’s Emerging Young Leaders",
+    description:
+      "EPIK 100 is a pan-African recognition program by EPIK Leaders, celebrating 100 young African leaders for their engagement, leadership potential, and positive impact across Africa.",
     images: ["/hero.jpg"],
     creator: "@epikleaders",
   },
@@ -85,7 +88,7 @@ export const metadata: Metadata = {
   },
   manifest: '/site.webmanifest',
   alternates: {
-    canonical: 'https://arab-african-summit.com',
+    canonical: 'https://epik-100.com',
   },
   verification: {
     google: 'your-google-verification-code',
@@ -102,48 +105,33 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Event",
-    "name": "Arab-African Summit on Non-Profit Financing",
-    "description": "A gathering designed to explore innovative funding models, foster collaboration, and build resilience for non-profits in Arab and African regions.",
-    "startDate": "2025-11-20T09:00:00+01:00",
-    "endDate": "2025-11-20T18:00:00+01:00",
+    "name": "EPIK 100 – Pan-African Recognition of Young Leaders",
+    "description":
+      "EPIK 100 is a pan-African recognition program by EPIK Leaders honoring 100 young African leaders selected for their community engagement, leadership potential, and commitment to positive impact across the continent.",
     "eventStatus": "https://schema.org/EventScheduled",
     "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
     "location": {
       "@type": "Place",
-      "name": "Rabat, Morocco",
+      "name": "Morocco",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Rabat",
         "addressCountry": "MA"
       }
     },
     "image": [
-      "https://arab-african-summit.com/hero.jpg"
+      "https://epik-100.com/hero.jpg"
     ],
     "organizer": {
       "@type": "Organization",
-      "name": "EPIK LEADERS",
-      "email": "info@epikleaders.org",
-      "telephone": "+212522171538",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Capital Tower, Bd Moulay Abdellah Cherif",
-        "addressLocality": "Casablanca",
-        "addressCountry": "MA"
-      },
-      "url": "https://arab-african-summit.com"
+      "name": "EPIK Leaders",
+      "url": "https://epikleaders.org",
+      "email": "info@epikleaders.org"
     },
     "offers": {
       "@type": "Offer",
-      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfcVy1sk4YTa5kO6F3JxU07ID0lDm1AiMn62PNjF_6x3eRYkA/viewform",
       "price": "0",
       "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock",
-      "validFrom": "2024-01-01"
-    },
-    "performer": {
-      "@type": "Organization",
-      "name": "EPIK LEADERS"
+      "availability": "https://schema.org/InStock"
     }
   };
 

@@ -17,7 +17,6 @@ export default function ContinuingMission() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // IMAGE animation (top -> bottom)
       gsap.fromTo(
         imageRef.current,
         { opacity: 0, y: -80 },
@@ -33,7 +32,6 @@ export default function ContinuingMission() {
         }
       );
 
-      // Paragraph 1 (right)
       gsap.fromTo(
         p1Ref.current,
         { opacity: 0, x: 80 },
@@ -49,7 +47,6 @@ export default function ContinuingMission() {
         }
       );
 
-      // Paragraph 2 (left)
       gsap.fromTo(
         p2Ref.current,
         { opacity: 0, x: -80 },
@@ -65,7 +62,6 @@ export default function ContinuingMission() {
         }
       );
 
-      // Paragraph 3 (right)
       gsap.fromTo(
         p3Ref.current,
         { opacity: 0, x: 80 },
@@ -86,59 +82,43 @@ export default function ContinuingMission() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="w-full py-28 bg-white">
-      <div className=" mx-auto px-6">
-        <SectionTitle title="EPIK 100: CONTINUING THE MISSION OF EPIK LEADERS" />
+    <section ref={sectionRef} className="w-full py-16 sm:py-20 lg:py-28 bg-white">
+      <div className="mx-auto px-4 sm:px-6 lg:px-6">
+        <SectionTitle title="EPIK 100 : prolonger l’engagement d’EPIK Leaders" />
 
-        {/* TITLE */}
-        {/* <h2 className="text-[#1f2937] text-3xl font-semibold mb-16">
-          EPIK 100: CONTINUING THE MISSION OF EPIK LEADERS
-        </h2> */}
-
-                
-                
-
-
-        {/* IMAGE */}
         <div
           ref={imageRef}
-          className="max-w-[900px] mx-auto h-[420px] rounded-2xl overflow-hidden mb-16 opacity-0"
+          className="max-w-[900px] mx-auto h-[260px] sm:h-[340px] lg:h-[420px] rounded-2xl overflow-hidden mb-10 sm:mb-14 lg:mb-16 opacity-0"
         >
           <img
-            src="/mission.webp"
+            src="/Bloc5.jpg"
             alt="EPIK 100 mission"
             className="w-full h-full object-cover"
           />
         </div>
 
-        {/* PARAGRAPHS */}
-        <div className="space-y-10">
+        <div className="space-y-6 sm:space-y-8 lg:space-y-10">
           <p
             ref={p1Ref}
-            className="text-[#4b5563] font-medium text-center text-3xl leading-relaxed opacity-0"
+            className="text-[#4b5563] font-medium text-center text-lg sm:text-xl lg:text-3xl leading-relaxed opacity-0"
           >
-            Designed as a collective moment of recognition, EPIK 100 aligns with the mission of
-            EPIK Leaders: to value the engagement of African youth and support them in their first
-            leadership journeys across the continent.
+            Conçue comme un moment collectif de reconnaissance, EPIK 100 s’inscrit dans la mission d’EPIK Leaders : valoriser l’engagement de la jeunesse africaine et l’accompagner dans ses premiers pas de leadership à travers le continent.
           </p>
 
           <p
             ref={p2Ref}
-            className="text-[#4b5563] font-medium text-center text-3xl leading-relaxed opacity-0"
+            className="text-[#4b5563] font-medium text-center text-lg sm:text-xl lg:text-3xl leading-relaxed opacity-0"
           >
-            The initiative encourages continued commitment, strengthens connections between EPIK
-            Leaders clubs, and fosters exchanges between local initiatives and pan-African networks.
+            Cette initiative encourage la poursuite de l’engagement, renforce les liens entre les clubs EPIK Leaders et favorise les échanges entre initiatives locales et réseaux panafricains.
           </p>
 
           <p
             ref={p3Ref}
-            className="text-[#4b5563] font-medium text-center text-3xl leading-relaxed opacity-0"
+            className="text-[#4b5563] font-medium text-center text-lg sm:text-xl lg:text-3xl leading-relaxed opacity-0"
           >
-            Through this program, EPIK Leaders builds a network of African leaders, ambassadors of
-            cooperation, innovation, and civic engagement in their countries.
+            À travers ce programme, EPIK Leaders construit un réseau de leaders africains, véritables ambassadeurs de la coopération, de l’innovation et de l’engagement citoyen dans leurs pays.
           </p>
         </div>
-
       </div>
     </section>
   );

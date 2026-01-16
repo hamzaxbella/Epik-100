@@ -1,22 +1,32 @@
 import Hero from "@/components/Hero";
 import Description from "@/components/Description";
-import Objectives from "@/components/Objectives";
-import Axes from "@/components/Axes";
 import ContinuingMission from "@/components/ContinuingMission";
 import LeadersGrid from "@/components/LeadersGrid";
 import type { Metadata } from "next";
-import ImageToCards from "@/components/ImageToCards";
 import SelectionBasedOnEngagement from "@/components/SelectionBasedOnEngagement";
 import AwardsRecognitionCeremony from "@/components/AwardsRecognitionCeremony";
+import PartnersCarousel from "@/components/PartnersCarousel";
 
 export const metadata: Metadata = {
-  title: "Arab-African Summit 2025 | Non-Profit Financing Conference Rabat",
-  description: "Join the Arab-African Summit on Non-Profit Financing in Rabat, Morocco on November 20, 2025. Explore innovative funding models, Islamic finance, and sustainable financing solutions.",
+  title: "EPIK 100 | Honoring Africa’s Emerging Young Leaders",
+  description:
+    "EPIK 100 is a pan-African recognition program by EPIK Leaders, celebrating 100 young African leaders selected for their engagement, leadership potential, and commitment to driving positive impact across the continent.",
+
   openGraph: {
-    title: "Arab-African Summit 2025 | Non-Profit Financing Conference",
-    description: "Join us in Rabat on November 20, 2025 for groundbreaking discussions on sustainable financing for non-profits.",
+    title: "EPIK 100 | Honoring Africa’s Emerging Young Leaders",
+    description:
+      "EPIK 100 is a pan-African recognition program by EPIK Leaders, honoring 100 young African leaders committed to community engagement, leadership, and positive impact across Africa.",
     type: "website",
-    images: ["/hero.jpg"],
+    url: "https://epik-100.com",
+    siteName: "EPIK 100",
+    images: [
+      {
+        url: "/hero.jpg",
+        width: 1800,
+        height: 900,
+        alt: "EPIK 100 – Pan-African Recognition Program by EPIK Leaders",
+      },
+    ],
   },
 };
 
@@ -27,25 +37,28 @@ export default function Home() {
         <Hero />
       </section>
 
-      <section aria-label="Summit description" id="about">
+      <section aria-label="Description" id="about">
         <Description />
       </section>
 
-      <section aria-label=" tives" id="objectives">
-        {/* <Objectives /> */}
+      <section aria-label="Engagment" id="engagment">
         <SelectionBasedOnEngagement />
       </section>
 
-      <section aria-label="Thematic axes" id="themes">
+      <section aria-label="Awards" id="awards">
         <AwardsRecognitionCeremony />
       </section>
 
-      <section aria-label="Expected outcomes" id="outcomes" className="lg:mt-20">
+      <section aria-label="Continuing Mission" id="mission" className="lg:mt-20">
         <ContinuingMission />
       </section>
 
-      <section aria-label="Register for summit" id="register">
+      <section aria-label="Leaders Grid" id="cards">
         <LeadersGrid />
+      </section>
+
+      <section aria-label="Partenaire" id="partners">
+        <PartnersCarousel />
       </section>
     </main>
   );
