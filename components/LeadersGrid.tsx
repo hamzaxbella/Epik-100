@@ -4,7 +4,7 @@ import { useState } from "react";
 import ReactCountryFlag from "react-country-flag";
 import SectionTitle from "./SectionTitle";
 export default function LeadersGrid() {
-  const [flipped, setFlipped] = useState<number | null>(null);
+  const [flipped, setFlipped] = useState<string | null>(null);
 
   const leaders = [
   {
